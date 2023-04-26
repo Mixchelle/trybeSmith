@@ -9,14 +9,14 @@ async function createUser(user: User): Promise<string> {
   return token;
 }
 
-async function login(user: Login): Promise<string | { message: string, status: number }> {
-  const data = await userModel.getUser(user);
-  if (!data || data.password !== user.password) {
-    return { message: 'Username or password invalid', status: 401 };
+async function login(user: Login): Promise<string | { message: string }> {
+  const result = await userModel.getUser(user);
+  if (!result || result.password !== user.password) {
+    return { message: 'Username or password invalid' };
   }
   const token = generateToken({
-    id: data.id,
-    username: data.username,
+    id: result.id, 
+    username: result.username,
     vocation: '',
     level: 0,
     password: '',
