@@ -1,10 +1,4 @@
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trybesmith - Projeto de Backend da Trybe</title>
-</head>
-
 <body>
   <h1>Trybesmith - Projeto de Backend da Trybe</h1>
 
